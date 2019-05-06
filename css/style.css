@@ -1,0 +1,306 @@
+ /* General
+----------------------------------------------- */
+
+body {
+	background: #f2f2f2;
+	font-family: 'PT Sans', sans-serif;
+}
+
+header {
+	margin-top: 30px;
+}
+
+header .nav {
+	min-height: 80px;
+	overflow: hidden;
+	background: #ffffff;
+}
+
+/* Logotipo
+----------------------------------------------- */
+
+header .logo h2,
+header .logo span,
+header .logo p {
+	font-size: 16px;
+	display: inline-block;
+	margin: 0;
+}
+
+header .logo h2 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+header .logo .icono {
+	color: #bfbfbf;
+}
+
+header .logo p {
+	color: #777777;
+}
+
+/* Menú
+----------------------------------------------- */
+
+header .menu {
+	padding: 0;
+}
+
+header .menu a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 0 30px;
+}
+
+header .menu a div span {
+	font-weight: 700;
+}
+
+header .menu .c-1 {background: #3da5e2;}
+header .menu .c-2 {background: #005385;}
+header .menu .c-3 {background: #003855;}
+
+header .menu .c-1:hover {background: #1ba0ef;}
+header .menu .c-2:hover {background: #00426a;}
+header .menu .c-3:hover {background: #002d44;}
+
+/* Slider
+----------------------------------------------- */
+
+.slider {
+	margin-bottom: 40px;
+}
+
+.slider .col {
+	padding: 0;
+}
+
+/* Portafolio
+----------------------------------------------- */
+
+.portafolio {
+	background: #ffffff;
+	border-top: 5px solid #3da5e2;
+	padding: 0 20px;
+	margin-bottom: 40px;
+}
+
+.portafolio .titulo {
+	padding: 40px 0;
+	text-align: center;
+	color: #3da5e2;
+	font-family: inherit;
+	font-weight: 400;
+}
+
+.portafolio .galeria .contenedor-imagen {
+	margin-bottom: 40px;
+	max-height: 180px;
+	overflow: hidden;
+}
+
+.portafolio .galeria .contenedor-imagen a {
+	display: inline-block;
+	background: #3da5e2;
+}
+
+.portafolio .galeria .contenedor-imagen:hover img {
+	opacity: 0.3;
+}
+
+.portafolio .modal-dialog {
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+}
+
+.modal-content {
+	width: auto;
+}
+
+/* Acerca de
+----------------------------------------------- */
+
+.acerca-de {
+	padding: 30px;
+	margin-bottom: 40px;
+}
+
+.acerca-de .foto {
+	text-align: center;
+}
+
+.acerca-de .foto img {
+	margin-bottom: 30px;
+}
+
+.acerca-de .foto .nombre {
+	color: #545454;
+	font-weight: 800;
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+
+.acerca-de .info .titulo {
+	color: #3da5e2;
+	font-family: inherit;
+	font-weight: 400;
+	font-size: 2rem;
+	margin-bottom: 30px;
+}
+
+.acerca-de .info .resumen {
+	text-align: justify;
+	font-size: 1.1rem;
+}
+
+.acerca-de .info .label {
+	font-size: 18px;
+	font-weight: 700;
+	color: #005385;
+	margin-bottom: 10px;
+}
+
+.acerca-de .info .progress {
+	background: #e9e9e9;
+	margin-bottom: 15px;
+	height: auto;
+}
+
+.acerca-de .info .progress-bar {
+	height: 25px;
+	background: #3da5e2;
+	line-height: 25px;
+	text-align: left;
+	padding-left: 20px;
+}
+
+/* Contacto
+----------------------------------------------- */
+
+.contacto {
+	padding: 40px 0;
+	margin-bottom: 40px;
+	border-top: 1px dashed #cbcbcb
+}
+
+.contacto .icono {
+	width: 100px;
+	height: 100px;
+	font-size: 40px;
+	line-height: 100px;
+	color: #ffffff;
+	text-align: center;
+	background: #cbcbcb;
+	display: inline-block;
+	margin: 0 20px;
+	text-decoration: none;
+	border-radius: 100px;
+	transition: all .3s ease; 
+}
+
+.contacto .github {background: #000000;}
+.contacto .twitter {background: #1da1f2;}
+.contacto .linkedin {background: #0077b5;}
+.contacto .facebook {background: #3b5998;}
+.contacto .mail {background: #c1392a;}
+
+/* Media query
+----------------------------------------------- */
+
+/* xl */
+@media screen and (max-width: 1199px) {}
+
+/* lg */
+@media screen and (max-width: 991px) {
+	.logo {
+		height: 76px;
+	}
+
+	.menu {
+		min-height: 76px;
+	}
+
+	.menu a {
+		width: 100%;
+	}
+
+	.menu a div {
+		width: 100%;
+	}
+
+	.portafolio .galeria .contenedor-imagen:nth-child(1) {order: 1;}
+	.portafolio .galeria .contenedor-imagen:nth-child(2) {order: 3;}
+	.portafolio .galeria .contenedor-imagen:nth-child(3) {order: 6;}
+	.portafolio .galeria .contenedor-imagen:nth-child(4) {order: 2;}
+	.portafolio .galeria .contenedor-imagen:nth-child(5) {order: 5;}
+	.portafolio .galeria .contenedor-imagen:nth-child(6) {order: 4;}
+	.portafolio .galeria .contenedor-imagen:nth-child(7) {order: 7;}
+
+	.modal .modal-dialog {
+		width: 100%;
+	}
+
+	.modal .modal-dialog .modal-content img {
+		width: 100%;
+	}
+
+	.contacto .icono {
+		width: 75px;
+		height: 75px;
+		line-height: 75px;
+		font-size: 30px;
+		margin: 0 10px;
+	}
+}
+
+/* md */
+@media screen and (max-width: 767px) {}
+
+/* sm */
+@media screen and (max-width: 575px) {
+	header {
+		margin-top: 0;
+		text-align: center;
+	}
+
+	header .logo h2,
+	header .logo p,
+	header .menu span {
+		font-size: 12px;
+	}
+
+	header .menu .c-1 {
+		padding: 5px 0;
+	}
+
+	header .menu .c-2 {
+		padding: 5px 0;
+	}
+
+	header .menu .c-3 {
+		padding: 5px 0;
+	}
+
+	.acerca-de .foto .nombre {
+		font-size: 1.2rem;
+	}
+
+	.acerca-de .info .titulo {
+		font-size: 1.4rem;
+	}
+
+	.portafolio h2 {
+		font-size: 1.4rem;
+	}
+
+	.contacto .icono {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 20px;
+		margin: 0 5px 10px;
+	}
+}

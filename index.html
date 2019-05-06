@@ -4,12 +4,204 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>avexyk | desarrollador web</title>
-	<link rel="stylesheet" href="">
+	<title>avexyk | web development</title>
+	<meta name="description" content="Página web de avexyk. Estudiante y programador enfocado en el desarrollo web. Portafolio para presentación de proyectos.">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/fontello.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
-	<header></header>
-	<main></main>
-	<footer></footer>
+	<header>
+		<div class="container">
+			<div class="row nav rounded-top align-items-stretch justify-content-between">
+
+				<div class="col-lg col-md-12 logo d-flex align-items-center justify-content-center justify-content-lg-start">
+					<h2>Francisco Javier Gil Bautista</h2>
+					<span class="icono icon-dot"></span>
+					<p>Web Development</p>
+				</div>
+
+				<nav class="col-lg-auto col-md-12 menu d-flex align-items-stretch flex-wrap flex-sm-nowrap">
+					<a href="#trabajos" class="c-1 d-flex align-items-center">
+						<div class="d-flex flex-column text-center">
+							<span>Portafolio</span>
+							<i class="icono icon-briefcase"></i>
+						</div>
+					</a>
+
+					<a href="#informacion" class="c-2 d-flex align-items-center">
+						<div class="d-flex flex-column text-center">
+							<span>Acerca de</span>
+							<i class="icono icon-user"></i>
+						</div>
+					</a>
+
+					<a href="#contacta" class="c-3 d-flex align-items-center">
+						<div class="d-flex flex-column text-center">
+							<span>Contacto</span>
+							<i class="icono icon-mail"></i>
+						</div>
+					</a>
+				</nav>
+
+			</div>
+
+			<div class="row slider">
+				<div class="col">
+
+					<div class="carousel slide" id="slider" data-ride="carousel">
+
+						<ol class="carousel-indicators">
+							<li data-target="#slider" data-slide-to="0" class="active"></li>
+							<li data-target="#slider" data-slide-to="1"></li>
+							<li data-target="#slider" data-slide-to="2"></li>
+						</ol>
+
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="img/slider_1.jpg" alt="Slide 1" class="d-block img-fluid">
+							</div>
+							<div class="carousel-item">
+								<img src="img/slider_2.jpg" alt="Slide 2" class="d-block img-fluid">
+							</div>
+							<div class="carousel-item">
+								<img src="img/slider_3.jpg" alt="Slide 3" class="d-block img-fluid">
+							</div>
+						</div>
+
+						<a href="#slider" class="carousel-control-prev" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+
+						<a href="#slider" class="carousel-control-next" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</header>
+
+	<main>
+		<div class="container" id="trabajos">
+			<div class="row portafolio">
+				<div class="col">
+					<h2 class="titulo">Portafolio</h2>
+					<div class="row galeria justify-content-center">
+
+						<div class="col-6 col-lg-4 contenedor-imagen">
+							<a href="#" data-toggle="modal" data-target="#modal">
+								<img src="img/proyectos/minavi.jpg" class="img-fluid imagen" alt="">
+							</a>
+						</div>
+
+						<div class="col-lg-8 col-12 contenedor-imagen">
+							<a href="#" data-toggle="modal" data-target="#modal">
+								<img src="img/proyectos/odeyumu.jpg" class="img-fluid imagen" alt="">
+							</a>
+						</div>
+
+						<div class="col-lg-8 col-12 contenedor-imagen">
+							<a href="#" data-toggle="modal" data-target="#modal">
+								<img src="img/proyectos/elcaporalmx.jpg" class="img-fluid imagen" alt="">
+							</a>
+						</div>
+
+						<div class="col-lg-4 col-6 contenedor-imagen">
+							<a href="#" data-toggle="modal" data-target="#modal">
+								<img src="img/proyectos/majoha.jpg" class="img-fluid imagen" alt="">
+							</a>
+						</div>
+
+						<div class="col-lg-4 col-6 contenedor-imagen">
+							<a href="#" data-toggle="modal" data-target="#modal">
+								<img src="img/proyectos/expresiones_regulares.jpg" class="img-fluid imagen" alt="">
+							</a>
+						</div>
+
+						<div class="col-lg-4 col-6 contenedor-imagen">
+							<a href="#" data-toggle="modal" data-target="#modal">
+								<img src="img/proyectos/android_1.jpg" class="img-fluid imagen" alt="">
+							</a>
+						</div>
+
+						<div class="col-lg-4 col-6 contenedor-imagen">
+							<a href="#" data-toggle="modal" data-target="#modal">
+								<img src="img/proyectos/biblioteca_basica.jpg" class="img-fluid imagen" alt="">
+							</a>
+						</div>
+
+						<div class="modal fade" id="modal">
+							<div class="modal-dialog d-flex justify-content-center align-items-center">
+								<div class="modal-content">
+									<img src="" id="imagen-modal" alt="">
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row acerca-de align-items-center" id="informacion">
+				<div class="col-12 col-lg-4 foto">
+					<img src="img/blog_myself.png" class="rounded-circle img-fluid" alt="">
+					<p class="nombre">avexyk</p>
+				</div>
+				<div class="col-12 col-lg-8 info">
+					<h2 class="titulo">Sobre mí</h2>
+					<p class="resumen">Mi nombre es <strong>Francisco Javier Gil Bautista</strong> soy estudiante en Ingeniería en Sistemas Computacionales, actualmente resido en Las Choapas, Veracruz.</p>
+					<p class="resumen">Tengo conocimientos y experiencia en Frontend(HTML, CSS, JavaScript), BackEnd(PHP, Python, JavaScript, SQL). He empleado frameworks como (Laravel, CodeIgniter, Spring) y SGBD(MySQL, SQL Server, Oracle Database XE).</p>
+					<p class="resumen">Además conozco sobre Java, C# y C++ y he utilizado CMS como WordPress, Joomla y Drupal. Suelo hacer pruebas con hardware como Arduino, Raspberry PI 3+ y componentes electronicos en mis tiempos libres.</p>
+					<p class="resumen">Mis intereses están en la programación en general y temas de inteligencia artificial. Mis lenguajes favoritos:</p>
+
+					<p class="label">PHP</p>
+					<div class="progress">
+						<div class="progress-bar" style="width: 70%;">70%</div>
+					</div>
+
+					<p class="label">Python</p>
+					<div class="progress">
+						<div class="progress-bar" style="width: 65%;">65%</div>
+					</div>
+
+					<p class="label">Java</p>
+					<div class="progress">
+						<div class="progress-bar" style="width: 65%;">65%</div>
+					</div>
+
+					<p class="label">C#</p>
+					<div class="progress">
+						<div class="progress-bar" style="width: 60%;">60%</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container" id="contacta">
+			<div class="row contacto justify-content-center">
+				<div class="col-auto">
+					<a href="https://github.com/avexyk" class="icono icon-github github" title="github" target="_blank"></a>
+					<a href="https://twitter.com/4v3xyk" class="icono icon-twitter twitter" title="twitter" target="_blank"></a>
+					<a href="https://www.linkedin.com/in/francisco-javier-gil-bautista/" class="icono icon-linkedin linkedin" title="linkedin" target="_blank"></a>
+					<a href="https://www.facebook.com/avexyk" class="icono icon-facebook facebook" title="facebook" target="_blank"></a>
+					<a href="mailto:avexyk@gmail.com?subject=Contacto" class="icono icon-mail mail" title="facebook" target="_blank"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
