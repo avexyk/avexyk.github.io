@@ -146,6 +146,10 @@ a {
   fill: #00aced;
 }
 
+.instagram svg:hover {
+  fill: #e1306c;
+}
+
 .sub-section {
   display: flex;
   justify-content: space-around;
