@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeToggleService } from '@shared/services/theme-toggle.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -12,49 +13,19 @@ export class HeaderComponent implements OnInit {
   showMenu: boolean = false;
 
   constructor( 
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private themeToggleService: ThemeToggleService
   ) {}
   
   
   ngOnInit(): void {
-
-    this.checkTheme();
-
-  }
-
-  // TODO: Optimizar
-  checkTheme() {
-    if (localStorage.getItem('colorMode') === 'dark') {
-      document.documentElement.classList.add('dark');
-      this.showDarkTheme = true;
-    } else if (localStorage.getItem('colorMode') === 'light') {
-      document.documentElement.classList.remove('dark');
-      this.showDarkTheme = false;
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('colorMode', 'dark');
-      this.showDarkTheme = true;
-    }
+    this.themeToggleService.loadColorMode();
+    this.themeToggleService.loadTheme();
   }
 
   changeTheme() {
-    if (localStorage.getItem('colorMode') === 'dark') {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('colorMode', 'light');
-      this.showDarkTheme = false;
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('colorMode', 'dark');
-      this.showDarkTheme = true;
-    }
-
-    let vagabundia = document.querySelector('.vagabundia');
-    if (vagabundia?.classList.contains('hidden')) {
-      vagabundia?.classList.remove('hidden')
-    } else {
-      vagabundia?.classList.add('hidden')
-    }
-    console.log( vagabundia );
+    this.themeToggleService.changeTheme();
+    this.themeToggleService.loadColorMode();
   }
 
   showMenuModal() {
