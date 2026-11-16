@@ -1,0 +1,162 @@
+{
+  "siteInfo": {
+    "terminalPromptUser": "avexyk@home: ",
+    "terminalPromptSymbol": "~#",
+    "startYear": 2019,
+    "copyrightText": "All rights pirated",
+    "brandName": "avexyk software co.",
+    "version": "v3.0",
+    "vagabundiaImageSrc": "assets/images/random/vagabundia.gif",
+    "vagabundiaAlt": "vagabundia",
+    "vagabundiaToastTitle": "Retro gif?",
+    "vagabundiaToastMessage": "Something should happen, maybe..."
+  },
+  "profile": {
+    "firstName": "Francisco Javier",
+    "highlightedLastName": "Gil Bautista",
+    "summaryPrefix": "Software engineer based in ",
+    "highlightedLocation": "México",
+    "summarySuffix": ". Building web applications, personal tools, and music transcriptions."
+  },
+  "navItems": [
+    {
+      "id": "home",
+      "label": "Home",
+      "route": "/",
+      "iconId": "home",
+      "toastMessage": ""
+    },
+    {
+      "id": "blog",
+      "label": "Blog",
+      "route": "/",
+      "iconId": "music",
+      "toastMessage": "In development"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "route": "/faq",
+      "iconId": "question-circle",
+      "toastMessage": ""
+    },
+    {
+      "id": "apps",
+      "label": "Apps",
+      "route": "/",
+      "iconId": "code",
+      "toastMessage": "In development"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "route": "/",
+      "iconId": "fire",
+      "toastMessage": "In development"
+    }
+  ],
+  "socialLinks": [
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/francisco-javier-gil/",
+      "hoverColorClasses": "hover:bg-blue-300 dark:hover:bg-blue-700"
+    },
+    {
+      "id": "lastfm",
+      "label": "Last.fm",
+      "url": "https://www.last.fm/es/user/avexyk",
+      "hoverColorClasses": "hover:bg-red-300 dark:hover:bg-red-700"
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@avexyk",
+      "hoverColorClasses": "hover:bg-rose-200 dark:hover:bg-rose-600"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/avexyk",
+      "hoverColorClasses": "hover:bg-violet-300 dark:hover:bg-violet-800"
+    }
+  ],
+  "sections": [
+    {
+      "id": "experiments",
+      "title": "Experiments",
+      "actionLabel": "Apps →",
+      "route": "/",
+      "iconId": "code-brackets",
+      "gradientClasses": "from-pink-600 to-purple-600",
+      "iconClasses": "h-5 w-5 -rotate-12 text-green-600",
+      "actionColorClasses": "text-amber-400",
+      "toastMessage": "In development"
+    },
+    {
+      "id": "sheet-music",
+      "title": "Sheet Music",
+      "actionLabel": "Archive →",
+      "route": "/",
+      "iconId": "music-note",
+      "gradientClasses": "from-fuchsia-600 to-emerald-600",
+      "iconClasses": "h-6 w-6 rotate-12 text-pink-600",
+      "actionColorClasses": "text-indigo-400",
+      "toastMessage": "In development"
+    },
+    {
+      "id": "random",
+      "title": "Random",
+      "actionLabel": "Explore →",
+      "route": "/",
+      "iconId": "question-circle",
+      "gradientClasses": "from-pink-600 to-purple-600",
+      "iconClasses": "h-6 w-6 text-fuchsia-600",
+      "actionColorClasses": "text-pink-400",
+      "toastMessage": "In development"
+    }
+  ],
+  "faqTitle": "FAQ",
+  "faqs": [
+    {
+      "id": "nuevo-sitio",
+      "question": "Nuevo sitio",
+      "intro": "Sí, sucedieron varias cosas:",
+      "items": [
+        "Mi proveedor de hosting y dominio era limitado.",
+        "Migre a Google, pero su servicio de dominios (clásico, pudo ser peor) fué vendido, así que a los 3 meses migre a otro proveedor.",
+        "El sitio esta en GitHub Pages actualmente, redireccionado con DNS records a mi dominio gestionado en CloudFlare (Una maravilla de servicio, espero estar completamente con ellos en los próximos meses)."
+      ]
+    },
+    {
+      "id": "como-se-hizo",
+      "question": "Cómo se hizo",
+      "intro": "Básicamente todo en Angular:",
+      "items": [
+        "Toda la arquitectura de Front-End en Angular.",
+        "El estilizado esta en Tailwind CSS y hay una que otra extensión corriendo."
+      ]
+    },
+    {
+      "id": "y-el-blog",
+      "question": "Y el blog",
+      "intro": "Paso a mejor vida, aunque el contenido lo tengo para moverlo, hay ideas:",
+      "items": [
+        "Anteriormente estaba funcionando en WordPress. Considere Jekyll, pero tuve mas contras, sobre todo para compilar las gemas de Ruby hay que bajar un set de herramientas, el livereload es malo y no se diga la integración con Tailwind CSS.",
+        "Otra opción era usar Gatsby pero era pesado.",
+        "Al final use Angular, solo me queda hacer un generador estático para las publicaciones o hacer malabares con json.",
+        "El desarrollo se realiza en mis tiempos libres, por lo cual va a tomar tiempo."
+      ]
+    },
+    {
+      "id": "y-el-codigo-fuente",
+      "question": "Y el código fuente",
+      "intro": "Se encuentra en uno de mis repositorios de GitHub:",
+      "items": [
+        "Idealmente hay que borrar ciertos archivos, sobre todo para que el deploy no se les truene.",
+        "La arquitectura de Front-End que tiene este sitio en Angular puede servir como punto de partida para proyectos mediados y grandes.",
+        "Los otros proyectos pasan a privados por la necesidad de infraestructura para subirlos online."
+      ]
+    }
+  ]
+}
