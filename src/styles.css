@@ -1,57 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-    --primary: #000000;
-    --secondary: #FFFFFF;
+  --primary: #000000;
+  --secondary: #ffffff;
 }
 
 @layer base {
-    html {
-        font-family: "Ubuntu", system-ui, sans-serif;
-        scroll-behavior: smooth;
-    }
+  html {
+    font-family: "Ubuntu", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
 }
 
-@layer components {
-    .example-class-extraction {
-        @apply bg-neutral-900 hover:bg-neutral-800;
-    }
+.link-underline {
+  position: relative;
 }
 
-@layer utilities {}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #d946ef, #ec4899);
+  transition: width 0.25s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+  left: 0;
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #d946ef, #ec4899);
+}
+
+.vagabundia {
+  cursor: pointer;
+  opacity: 0.6;
+  transform: rotate(0deg) scale(0.8);
+  transition: all 1s;
+}
+
+.vagabundia:hover {
+  opacity: 1;
+  transform: rotate(360deg) scale(1);
+}
+
+@keyframes toast-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-toast-progress {
+  animation-name: toast-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
 
 * {
-    scrollbar-width: thin;
-    scrollbar-color: #500724 #262626;
+  scrollbar-width: thin;
+  scrollbar-color: #500724 #262626;
 }
 
 *::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
-    background: #262626;
-    border-radius: 0;
+  background: #262626;
+  border-radius: 0;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #500724;
-    border-radius: 10px;
-    border: none;
+  background-color: #500724;
+  border-radius: 10px;
+  border: none;
 }
 
 ::selection {
-    background: #be185d;
+  background: #be185d;
 }
-
-::-moz-selection {
-    background: #be185d;
-}
-
-::-webkit-selection {
-    background: #be185d;
-}
-

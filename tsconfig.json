@@ -1,40 +1,38 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "resolveJsonModule": true, // uso json
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "paths": { // paths
-      "@core/*":[
-        "src/app/core/*"
-      ],
-      "@modules/*":[
-        "src/app/modules/*"
-      ],
-      "@shared/*":[
-        "src/app/shared/*"
-      ]
-    },
-    "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "paths": {
+      "@libraries/result-entities": ["./src/app/libraries/result-entities/index.ts"],
+      "@libraries/result-entities/*": ["./src/app/libraries/result-entities/*"],
+      "@entities": ["./src/app/entities/index.ts"],
+      "@entities/*": ["./src/app/entities/*"],
+      "@business-objects": ["./src/app/business-objects/index.ts"],
+      "@business-objects/*": ["./src/app/business-objects/*"],
+      "@gateways": ["./src/app/gateways/index.ts"],
+      "@gateways/*": ["./src/app/gateways/*"],
+      "@view-models": ["./src/app/view-models/index.ts"],
+      "@view-models/*": ["./src/app/view-models/*"],
+      "@views": ["./src/app/views/index.ts"],
+      "@views/*": ["./src/app/views/*"],
+      "@ioc": ["./src/app/ioc/index.ts"],
+      "@ioc/*": ["./src/app/ioc/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
