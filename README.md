@@ -1,27 +1,39 @@
-# Avexyk
+# avexyk.github.io (v3.0)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+Personal website and custom hub built with modern Angular and strict Clean Architecture principles.
 
-## Development server
+## Tech Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* **Framework:** Angular v22 (Zoneless, Standalone Components, Reactive Signals)
+* **Styling:** Tailwind CSS v4 (CSS-first configuration with custom variants)
+* **Architecture:** Uncle Bob's Clean Architecture (4 Rings + Transversal Libraries) + MVVM Pattern
+* **Testing:** Vitest (fast unit testing suite)
+* **Build & Deployment:** Angular Application Builder (`@angular/build:application`) with Static Site Generation (SSG Prerender) and GitHub Actions CI/CD.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Architectural Layers
 
-## Build
+The source code in `src/app/` is strictly organized into decoupled layers following the dependency rule:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **`@libraries/`** — Pure functional building blocks (e.g., discriminated `Result<S, E>` pattern).
+2. **`@entities/`** — Immutable domain models and value objects.
+3. **`@business-objects/`** — Abstract ports (interfaces), options configuration, and application business rules.
+4. **`@gateways/`** — Interface adapters for static JSON content fetching, SSR-safe color mode management, and test fakes.
+5. **`@view-models/`** — Reactive presentation state powered by Angular `signal()` and `computed()`.
+6. **`@views/`** — Dumb UI components utilizing `ChangeDetectionStrategy.OnPush` and native control flow (`@if`, `@for`).
+7. **`@ioc/`** — Composition root wiring all dependency injection providers.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Development Server
 
-## Running end-to-end tests
+Run `npm start` for a local development server. Navigate to `http://localhost:4200/`. The application will automatically reload when source files change.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Running Unit Tests
 
-## Further help
+Run `npm test` (or `npm test -- --watch=false`) to execute unit test suites via **Vitest**.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Production Build & SSG
+
+Run `npm run build` to generate the static prerendered production bundle in the `dist/avexyk/browser` directory.
