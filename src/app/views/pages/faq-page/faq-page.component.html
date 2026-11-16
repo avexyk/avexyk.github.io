@@ -1,0 +1,46 @@
+<div class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+  <div class="flex min-h-screen flex-col justify-between">
+    <!-- header -->
+    <app-header class="flex items-center justify-between py-10" />
+
+    <!-- main -->
+    <main class="mb-auto">
+      <div class="mt-5 md:pl-8">
+        <div class="space-y-2 pb-6 pt-2 md:space-y-5">
+          <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            {{ viewModel.faqTitle() }}
+          </h1>
+        </div>
+
+        <div class="max-w-none pb-6 pt-2 xl:col-span-2">
+          @for (faq of viewModel.faqs(); track faq.id) {
+            <div class="my-3">
+              <div class="flex flex-row text-xl">
+                <span class="text-pink-500">¿</span>
+                <span class="text-gray-500 dark:text-gray-400">&nbsp;{{ faq.question }}&nbsp;</span>
+                <span class="text-pink-500">?</span>
+              </div>
+
+              <div>
+                <div class="p-1 font-mono text-sm text-gray-400 dark:text-gray-600">
+                  {{ faq.intro }}
+                </div>
+
+                <div class="p-2">
+                  @for (item of faq.items; track $index) {
+                    <div class="flex flex-row">
+                      <div class="mr-2 text-lg text-pink-500">&rarr; </div>
+                      <div class="text-gray-500 dark:text-gray-400">{{ item }}</div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </main>
+
+    <app-footer class="bg-slate-100 transition duration-1000 hover:bg-slate-200 dark:bg-neutral-900 dark:hover:bg-neutral-800" />
+  </div>
+</div>

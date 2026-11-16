@@ -1,0 +1,35 @@
+<div
+  class="pointer-events-none fixed right-3 bottom-3 z-50 flex flex-col gap-2"
+  aria-live="polite"
+  aria-atomic="true">
+  @for (toast of notificationService.notifications(); track toast.id) {
+    <div
+      (click)="notificationService.dismiss(toast.id)"
+      [class]="'pointer-events-auto relative flex w-[300px] cursor-pointer items-center gap-3 overflow-hidden rounded p-4 text-white shadow-lg transition-opacity duration-300 ' + getVariantClasses(toast.variant)"
+      role="status">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="h-6 w-6 shrink-0">
+        <path
+          fill-rule="evenodd"
+          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+          clip-rule="evenodd" />
+      </svg>
+
+      <div class="min-w-0 flex-1">
+        @if (toast.title) {
+          <div class="text-sm font-bold">{{ toast.title }}</div>
+        }
+        <div class="break-words text-sm">{{ toast.message }}</div>
+      </div>
+
+      @if (toast.durationMs > 0) {
+        <div
+          class="animate-toast-progress absolute bottom-0 left-0 h-1 bg-black/40"
+          [style.animation-duration.ms]="toast.durationMs"></div>
+      }
+    </div>
+  }
+</div>
